@@ -1,0 +1,9 @@
+{
+  "name" : "ionic-snippets",
+  "author" : "Stone C. Lasley",
+  "maintainer" : "Stone C. Lasley",
+  "repository" : {"type": "git", "url": "git://github.com/stonelasley/ionic-snippets.git"},
+  "dependencies" : {
+  },
+  "description" : "ionic2+ snippets for Ultisnips"
+}

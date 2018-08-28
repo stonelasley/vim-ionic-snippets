@@ -1,0 +1,70 @@
+snippet ion-content "<ion-content>" 
+<ion-content>
+	${0:${VISUAL}}
+</ion-content>
+endsnippet
+
+snippet ion-content. "<ion-content> with class" w
+<ion-content`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
+	${0:${VISUAL}}
+</ion-content>
+endsnippet
+
+snippet ion-list "<ion-list>" 
+<ion-list>
+	${0:${VISUAL}}
+</ion-list>
+endsnippet
+
+snippet ion-list. "<ion-list> with class" w
+<ion-list`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
+	${0:${VISUAL}}
+</ion-list>
+endsnippet
+
+snippet ion-card "<ion-card>" 
+<ion-card>
+	${0:${VISUAL}}
+</ion-card>
+endsnippet
+
+snippet ion-card. "<ion-card> with class" w
+<ion-card`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
+	${0:${VISUAL}}
+</ion-card>
+endsnippet
+
+snippet ion-card-header "<ion-card-header>" 
+<ion-card-header>
+	${0:${VISUAL}}
+</ion-card-header>
+endsnippet
+
+snippet ion-card-header# "<ion-card-header> with ID & class" w
+<ion-card-header`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""``!p snip.rv=' class="' if t[2] else ""`${2:name}`!p snip.rv = '"' if t[2] else ""`>
+	${0:${VISUAL}}
+</ion-card-header>
+endsnippet
+
+snippet ion-card-content "<ion-card-content>" 
+<ion-card-content>
+	${0:${VISUAL}}
+</ion-card-content>
+endsnippet
+
+snippet ion-card-content. "<ion-card-content> with class" w
+<ion-card-content`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
+	${0:${VISUAL}}
+</ion-card-content>
+endsnippet
+
+snippet ion-label "<ion-label>" 
+<ion-label>
+	${0:${VISUAL}}
+</ion-label>
+endsnippet
+
+snippet ion-select "<ion-select>" 
+<ion-select `!p snip.rv=' id="' if t[1] else ""`${1:id} `!p snip.rv = '"' if t[1] else ""` `!p snip.rv=' class="' if t[2] else ""`${2:class} `!p snip.rv = '"' if t[2] else ""` `!p snip.rv=' [(ngModel)]="' if t[3] else ""`${3:model}`!p snip.rv = '"' if t[3] else ""` `!p snip.rv=' multiple="' if t[4] else ""`${4:false}`!p snip.rv = '"' if t[4] else ""` `!p snip.rv=' cancelText="' if t[5] else ""`${5:Cancel}`!p snip.rv = '"' if t[5] else ""` `!p snip.rv=' okText="' if t[6] else ""`${6:OK}`!p snip.rv = '"' if t[6] else ""` > ${0:${VISUAL}}
+</ion-select>
+endsnippet
