@@ -1,19 +1,49 @@
-snippet ion-content "<ion-content>" 
-<ion-content>
-	${0:${VISUAL}}
-</ion-content>
-endsnippet
-
 snippet ion-content. "<ion-content> with class" w
 <ion-content`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
 	${0:${VISUAL}}
 </ion-content>
 endsnippet
 
-snippet ion-list "<ion-list>" 
-<ion-list>
+snippet ion-item "<ion-item>" 
+<ion-item>
 	${0:${VISUAL}}
-</ion-list>
+</ion-item>
+endsnippet
+
+snippet ion-item-group "<ion-item-group>" 
+<ion-item-group>
+	${0:${VISUAL}}
+</ion-item-group>
+endsnippet
+
+snippet ion-item-divider "<ion-item-divider>" 
+<ion-item-divider`!p snip.rv=' color="' if t[1] else ""`${1:light}`!p snip.rv = '"' if t[1] else ""`>
+	${0:${VISUAL}}
+</ion-item-divider>
+endsnippet
+
+snippet ion-note "<ion-note>" 
+<ion-note>
+	${0:${VISUAL}}
+</ion-note>
+endsnippet
+
+snippet ion-header "<ion-header>" 
+<ion-header>
+	${0:${VISUAL}}
+</ion-header>
+endsnippet
+
+snippet ion-navbar "<ion-navbar>" 
+<ion-navbar>
+	${0:${VISUAL}}
+</ion-navbar>
+endsnippet
+
+snippet ion-header "<ion-header>" 
+<ion-header>
+	${0:${VISUAL}}
+</ion-header>
 endsnippet
 
 snippet ion-list. "<ion-list> with class" w
@@ -22,10 +52,10 @@ snippet ion-list. "<ion-list> with class" w
 </ion-list>
 endsnippet
 
-snippet ion-card "<ion-card>" 
-<ion-card>
+snippet ion-list-header. "<ion-list-header> with class" w
+<ion-list-header`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
 	${0:${VISUAL}}
-</ion-card>
+</ion-list-header>
 endsnippet
 
 snippet ion-card. "<ion-card> with class" w
@@ -34,22 +64,16 @@ snippet ion-card. "<ion-card> with class" w
 </ion-card>
 endsnippet
 
-snippet ion-card-header "<ion-card-header>" 
-<ion-card-header>
-	${0:${VISUAL}}
-</ion-card-header>
-endsnippet
-
-snippet ion-card-header# "<ion-card-header> with ID & class" w
+snippet ion-card-header. "<ion-card-header> with ID & class" w
 <ion-card-header`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""``!p snip.rv=' class="' if t[2] else ""`${2:name}`!p snip.rv = '"' if t[2] else ""`>
 	${0:${VISUAL}}
 </ion-card-header>
 endsnippet
 
-snippet ion-card-content "<ion-card-content>" 
-<ion-card-content>
+snippet ion-card-title "<ion-card-title>" 
+<ion-card-title>
 	${0:${VISUAL}}
-</ion-card-content>
+</ion-card-title>
 endsnippet
 
 snippet ion-card-content. "<ion-card-content> with class" w
@@ -59,12 +83,111 @@ snippet ion-card-content. "<ion-card-content> with class" w
 endsnippet
 
 snippet ion-label "<ion-label>" 
-<ion-label>
+<ion-label $1>${0:${VISUAL}}</ion-label>
+endsnippet
+
+snippet ion-input "<ion-input>" 
+<ion-input type="${0:text}"></ion-input>
+endsnippet
+
+snippet ion-grid "<ion-grid>" 
+<ion-grid>
 	${0:${VISUAL}}
-</ion-label>
+</ion-grid>
+endsnippet
+
+snippet ion-row "<ion-row>" 
+<ion-row>
+	${0:${VISUAL}}
+</ion-row>
+endsnippet
+
+snippet ion-col "<ion-col>" 
+<ion-col $1>
+	${0:${VISUAL}}
+</ion-col>
+endsnippet
+
+snippet ion-icon "<ion-icon>" 
+<ion-icon `!p snip.rv=' name="' if t[2] else ""`${2:name} `!p snip.rv = '"' if t[2] else ""` $0></ion-icon>
+endsnippet
+
+snippet ion-fab "<ion-fab>" 
+<ion-fab `!p snip.rv=' name="' if t[2] else ""`${2:name} `!p snip.rv = '"' if t[2] else ""` $0></ion-fab>
+endsnippet
+
+snippet ion-avatar "<ion-avatar>" 
+<ion-avatar> 
+	<img src="$0">
+</ion-avatar>
+endsnippet
+
+snippet ion-badge "<ion-badge>" 
+<ion-badge `!p snip.rv=' color="' if t[2] else ""`${2:color} `!p snip.rv = '"' if t[2] else ""` $0></ion-badge>
+endsnippet
+
+snippet ion-button "<button ion-button>" 
+<button ion-button `!p snip.rv=' color="' if t[2] else ""`${2:color} `!p snip.rv = '"' if t[2] else ""` > 
+	${0:${VISUAL}}
+</button>
 endsnippet
 
 snippet ion-select "<ion-select>" 
-<ion-select `!p snip.rv=' id="' if t[1] else ""`${1:id} `!p snip.rv = '"' if t[1] else ""` `!p snip.rv=' class="' if t[2] else ""`${2:class} `!p snip.rv = '"' if t[2] else ""` `!p snip.rv=' [(ngModel)]="' if t[3] else ""`${3:model}`!p snip.rv = '"' if t[3] else ""` `!p snip.rv=' multiple="' if t[4] else ""`${4:false}`!p snip.rv = '"' if t[4] else ""` `!p snip.rv=' cancelText="' if t[5] else ""`${5:Cancel}`!p snip.rv = '"' if t[5] else ""` `!p snip.rv=' okText="' if t[6] else ""`${6:OK}`!p snip.rv = '"' if t[6] else ""` > ${0:${VISUAL}}
+<ion-select `!p snip.rv=' [(ngModel)]="' if t[3] else ""`${3:model} `!p snip.rv = '"' if t[3] else ""` `!p snip.rv=' multiple="' if t[4] else ""`${4:false} `!p snip.rv = '"' if t[4] else ""` `!p snip.rv=' cancelText="' if t[5] else ""`${5:Cancel} `!p snip.rv = '"' if t[5] else ""` `!p snip.rv=' okText="' if t[6] else ""`${6:OK} `!p snip.rv = '"' if t[6] else ""` > 
+    ${0:${VISUAL}}
 </ion-select>
+endsnippet
+
+snippet ion-datetime "<ion-datetime>" 
+<ion-datetime `!p
+ snip.rv=' [(ngModel)]="' if t[1] else ""`${1:model} `!p snip.rv = '"' if t[1] else ""` `!p
+ snip.rv=' displayFormat="' if t[2] else ""`${2:h:mm A} `!p snip.rv = '"' if t[2] else ""` `!p
+ snip.rv=' cancelText="' if t[3] else ""`${3:Cancel} `!p snip.rv = '"' if t[3] else ""` `!p
+ snip.rv=' okText="' if t[4] else ""`${4:OK} `!p snip.rv = '"' if t[4] else ""` > 
+	${0:${VISUAL}}
+</ion-datetime>
+endsnippet
+
+snippet ion-checkbox "<ion-checkbox>" 
+<ion-checkbox `!p
+ snip.rv=' [(ngModel)]="' if t[1] else ""`${1:model} `!p snip.rv = '"' if t[1] else ""` `!p
+ snip.rv=' color="' if t[2] else ""`${2:color} `!p snip.rv = '"' if t[2] else ""` `!p
+ snip.rv=' checked="' if t[3] else ""`${3:false} `!p snip.rv = '"' if t[3] else ""` `!p
+ snip.rv=' disabled="' if t[4] else ""`${4:false} `!p snip.rv = '"' if t[4] else ""` > 
+	${0:${VISUAL}}
+</ion-checkbox>
+endsnippet
+
+snippet ion-element "<ion-element>" 
+<ion-element 
+`!p snip.rv=' attribute1="' if t[1] else ""`${1:val1} `!p snip.rv = '"' if t[1] else ""`
+`!p snip.rv=' attribute2="' if t[2] else ""`${2:val2} `!p snip.rv = '"' if t[2] else ""` 
+`!p snip.rv=' attribute3="' if t[3] else ""`${3:val3} `!p snip.rv = '"' if t[3] else ""` 
+> 
+	${0:${VISUAL}}
+</ion-element>
+endsnippet
+
+snippet tap "(tap)='tapEvent($event)'" 
+	(tap)=${0:tapEvent($event)}
+endsnippet
+
+snippet pinch "(pinch)='pinchEvent($event)'" 
+	(pinch)=${0:pinchEvent($event)}
+endsnippet
+
+snippet press "(press)='pressEvent($event)'" 
+	(press)=${0:pressEvent($event)}
+endsnippet
+
+snippet pan "(pan)='panEvent($event)'" 
+	(pan)=${0:panEvent($event)}
+endsnippet
+
+snippet swipe "(swipe)='swipeEvent($event)'" 
+	(swipe)=${0:swipeEvent($event)}
+endsnippet
+
+snippet rotate "(rotate)='rotateEvent($event)'" 
+	(rotate)=${0:rotateEvent($event)}
 endsnippet
